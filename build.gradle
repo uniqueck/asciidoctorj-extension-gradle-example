@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'org.asciidoctor.jvm.convert' version '3.1.0'
+}
+
+group 'org.github.uniqueck'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+configurations {
+    asciidoctorExt
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    asciidoctorExt 'com.uniqueck:asciidoctorj-liquibase-extension:0.0.3'
+}
+
+asciidoctor {
+    configurations 'asciidoctorExt'
+}
+
+asciidoctorj {
+    attributes 'liquibase-dir': 'src/main/resources/db'
+}
+
+test {
+    useJUnitPlatform()
+}

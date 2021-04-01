@@ -1,0 +1,5 @@
+ifndef::liquibase-dir[:liquibase-dir: ../../main/resources/db]
+
+= Asciidoctorj Extensions Example
+
+liquibase::{liquibase-dir}/simplechangeset.xml[]
