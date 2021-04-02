@@ -1,5 +1,22 @@
-ifndef::liquibase-dir[:liquibase-dir: ../../main/resources/db]
-
+ifndef::liquibaseDir[:liquibaseDir: ../../main/resources/db]
+ifndef::officeDir[:officeDir: ../../main/resources]
+:doctype: book
 = Asciidoctorj Extensions Example
 
-liquibase::{liquibase-dir}/simplechangeset.xml[]
+== Liquibase Extension
+
+liquibase::{liquibaseDir}/simplechangeset.xml[]
+
+== Office Extension
+
+=== Impress / MS Powerpoint
+
+slide::{officeDir}/impress-example.pptx[slideNumber=1]
+
+=== MS Excel
+
+excel::{officeDir}/calc-example.xlsx[sheetName=Sheet1]
+
+
+
+
