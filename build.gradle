@@ -8,10 +8,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    jcenter()
-    maven {
-        url  "https://dl.bintray.com/uniqueck/asciidoctorj"
-    }
 }
 
 configurations {
@@ -19,8 +15,8 @@ configurations {
 }
 
 dependencies {
-    asciidoctorExt 'com.uniqueck:asciidoctorj-liquibase-extension:0.0.3'
-    asciidoctorExt 'com.uniqueck:asciidoctorj-office-extension:0.0.1-alpha.2'
+    asciidoctorExt 'de.uniqueck.asciidoctorj.extensions:asciidoctorj-liquibase-extension:0.1.0'
+    asciidoctorExt 'de.uniqueck.asciidoctorj.extensions:asciidoctorj-office-extension:0.1.0'
 }
 
 asciidoctor {
